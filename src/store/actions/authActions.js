@@ -51,3 +51,23 @@ export const signUp = newUser => {
       });
   };
 };
+
+const User = user => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase();
+    const firestore = getFirestore();
+
+    var userId = firebase.auth().currentUser.uid;
+    return firebase
+      .database()
+      .ref("/users/" + userId)
+      .once("value")
+      .then(function(snapshot) {
+        var username =
+          (snapshot.val() && snapshot.val().firstName) || "Anonymous";
+        console.log(JSON.stringify(username));
+      });
+  };
+};
+
+export default User;

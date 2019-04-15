@@ -12,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-
+          <ChatApp />
           <Switch>
             {/* <Route path="/" component={ChatBoard} /> */}
             <Route path="/signin" component={SignIn} />
