@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import MessageWindow from "./MessageWindow";
+import SearchForm from "../form/SerachForm";
+import NewMessageForm from "../form/NewMessageForm";
+import ChatList from "./ChatList";
 import Message from "./Message";
-class ChatBoard extends Component {
+class ChatApp extends Component {
   render() {
     return (
       <div className="chatboard container">
         <div className="row">
           <div className="col s12 m6">
             <p>chats</p>
-            <MessageWindow />
+
             <div className="col s12 m5 offset-m1" />
             <p>MessageWindow</p>
             <Message />
@@ -19,4 +21,4 @@ class ChatBoard extends Component {
   }
 }
 
-export default ChatBoard;
+export default ChatApp;
