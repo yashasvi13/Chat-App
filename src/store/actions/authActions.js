@@ -52,22 +52,24 @@ export const signUp = newUser => {
   };
 };
 
-const User = user => {
+export const User = user => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firebase = getFirebase();
+    // const firebase = getFirebase();
     const firestore = getFirestore();
 
-    var userId = firebase.auth().currentUser.uid;
-    return firebase
-      .database()
-      .ref("/users/" + userId)
-      .once("value")
-      .then(function(snapshot) {
-        var username =
-          (snapshot.val() && snapshot.val().firstName) || "Anonymous";
-        console.log(JSON.stringify(username));
+    // const userId = firebase.auth().currentUser.uid;
+    return firestore
+      .collection("users")
+      .get()
+
+      .then(snapshot => {
+        const users = [];
+        snapshot.forEach(doc => {
+          users.push(doc.data().firstName + " " + doc.data().lastName);
+          // console.log(doc.id, "=>", doc.data());
+        });
+        console.log(users);
+        // console.log(snapshot);
       });
   };
 };
-
-export default User;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
@@ -25,7 +25,7 @@ const Navbar = props => {
   );
 };
 const mapStateToProps = state => {
-  console.log(state);
+  // console.log(state);
 
   return {
     auth: state.firebase.auth,

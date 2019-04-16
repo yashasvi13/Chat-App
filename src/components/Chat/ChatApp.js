@@ -1,25 +1,18 @@
 import React, { Component } from "react";
-import SearchForm from "../form/SerachForm";
+// import SearchForm from "../form/SerachForm";
 import NewMessageForm from "../form/NewMessageForm";
 import ChatList from "./ChatList";
 import Message from "./Message";
 import { connect } from "react-redux";
 // import { getFirebase } from "react-redux-firebase";
 import firebase from "../../config/fbConfig";
-import User from "../../store/actions/authActions";
+import { User } from "../../store/actions/authActions";
 
 class ChatApp extends Component {
   componentDidMount() {
-    console.log("getting firebase");
-    // var firebase = require("firebase/database");
-    // var firebase = getFirebase();
-    // var database = firebase.database();
-
-    this.props.User();
-
-    console.log("start");
-
-    console.log("stop");
+    {
+      const user = this.props.User();
+    }
   }
   render() {
     return (
