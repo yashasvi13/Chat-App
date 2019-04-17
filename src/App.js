@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import ChatApp from "./components/Chat/ChatApp";
+import ChatList from "./components/Chat/ChatList";
+
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
+// import NewMessageForm from "./components/form/NewMessageForm";
 
 class App extends Component {
   render() {
@@ -11,9 +14,11 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <ChatApp />
+
+          <ChatList />
+          {/* <NewMessageForm /> */}
           <Switch>
-            {/* <Route path="/" component={ChatBoard} /> */}
+            <Route path="/" component={ChatApp} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
           </Switch>
