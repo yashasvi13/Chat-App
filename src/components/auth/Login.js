@@ -58,12 +58,12 @@ class Login extends Component {
                 Login
               </Link>
             </button>
-            {/* <p>
+            <p>
               Already a user?{" "}
               <Link to="/login" className="green-text lighten-1">
                 Login
               </Link>
-            </p> */}
+            </p>
           </div>
         </form>
       </div>
