@@ -12,3 +12,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.col.s3 {
+  min-height: 100vh;
+  background: #58c470;
+}
+.col.s9 {
+  min-height: 100vh;
+  background: beige;
+}

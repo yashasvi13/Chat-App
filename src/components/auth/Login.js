@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import firebase from "../../firebase";
 class Login extends Component {
   state = {
@@ -53,7 +53,11 @@ class Login extends Component {
           </div>
           <div className="input-field">
             <br />
-            <button className="btn green lighten-1 z-depth-0">Login</button>
+            <button className="btn green lighten-1 z-depth-0">
+              <Link className="white-text" to="/">
+                Login
+              </Link>
+            </button>
             {/* <p>
               Already a user?{" "}
               <Link to="/login" className="green-text lighten-1">
