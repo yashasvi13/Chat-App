@@ -14,7 +14,7 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <nav className="nav-wrapper  grey darken-2">
+      <nav className="nav-wrapper green darken-2">
         <div className="container">
           <Link to="/" className="brand-logo left">
             My Chat App

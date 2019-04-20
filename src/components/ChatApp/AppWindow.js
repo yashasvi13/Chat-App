@@ -4,8 +4,8 @@ import Message from "./Message";
 import SideBar from "./SideBar";
 
 const AppWindow = () => (
-  <div className="app">
-    <div className="row">
+  <div className="app fixed scrollspy">
+    <div className="row ">
       <Navbar />
       <div className="col s3 left">
         <SideBar />
