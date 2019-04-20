@@ -59,9 +59,9 @@ class Login extends Component {
               </Link>
             </button>
             <p>
-              Already a user?{" "}
-              <Link to="/login" className="green-text lighten-1">
-                Login
+              Not a user?{" "}
+              <Link to="/register" className="green-text lighten-1">
+                Register
               </Link>
             </p>
           </div>

@@ -19,9 +19,9 @@ class Navbar extends Component {
           <Link to="/" className="brand-logo left">
             My Chat App
           </Link>
-          <Link className="right" to="/login" onClick={this.handleSignOut}>
+          <span className="right" onClick={this.handleSignOut}>
             Signout
-          </Link>
+          </span>
         </div>
       </nav>
     );

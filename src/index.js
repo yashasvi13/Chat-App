@@ -5,10 +5,17 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, withRouter } from "react-router-dom";
 import { createStore } from "redux";
+import { Provider, connect } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { Provider } from "react-redux";
-const store = createStore(() => {}, composeWithDevTools());
-const AppwithAuth = withRouter(App);
+import rootReducer from "./components/reducers";
+import { setUser, clearUser } from "./components/actions";
+const store = createStore(rootReducer, composeWithDevTools());
+const AppwithAuth = withRouter(
+  connect(
+    null,
+    { setUser, clearUser }
+  )(App)
+);
 ReactDOM.render(
   <Provider store={store}>
     <Router>
