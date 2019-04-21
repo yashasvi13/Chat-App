@@ -3,20 +3,9 @@ import firebase from "../../firebase";
 class UserList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: {}
-    };
+    this.state = {};
   }
   componentDidMount() {
-    const user = firebase.auth().currentUser;
-    const obj = {};
-    if (user != null) {
-      obj.name = user.displayName;
-      obj.email = user.email;
-      obj.uid = user.uid;
-    }
-    this.setState({ user: obj });
-
     firebase
       .database()
       .ref()
@@ -41,26 +30,6 @@ class UserList extends Component {
     });
   };
 
-  handleChange = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
-  };
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state);
-    const usrObj = {
-      user: this.state.user.displayName
-    };
-    const db = firebase.database();
-    db.ref()
-      .child("messages")
-      .push(usrObj);
-
-    this.setState({
-      user: ""
-    });
-  };
   render() {
     return (
       <div className="card ">
