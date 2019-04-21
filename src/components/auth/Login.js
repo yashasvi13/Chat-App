@@ -31,7 +31,7 @@ class Login extends Component {
       <div className="container">
         <br />
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="green-text text-darken-3">Login</h5>
+          <h5 className="cyan-text text-darken-3">Login</h5>
           <br />
           <div className="input-field">
             <label htmlFor="email">Email</label>
@@ -53,15 +53,15 @@ class Login extends Component {
           </div>
           <div className="input-field">
             <br />
-            <button className="btn green lighten-1 z-depth-0">
+            <button className="btn cyan text-darken-2 z-depth-0">
               <Link className="white-text" to="/">
                 Login
               </Link>
             </button>
             <p>
               Not a user?{" "}
-              <Link to="/register" className="green-text lighten-1">
-                Register
+              <Link to="/register" className="cyan-text text-darken-4">
+                Register!
               </Link>
             </p>
           </div>

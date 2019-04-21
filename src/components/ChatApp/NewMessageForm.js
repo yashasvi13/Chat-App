@@ -48,7 +48,7 @@ class NewMessageForm extends Component {
     db.ref()
       .child("messages")
       .push(msgObj);
-    console.log(msgObj);
+
     this.setState({
       message: ""
     });
@@ -57,7 +57,7 @@ class NewMessageForm extends Component {
     return (this.state.list || []).map((msg, index) => {
       return (
         <div className="card" key={`message-${index}`}>
-          <span className="card green-text">{msg.user}</span>
+          <span className="card grey-text darken-4 users">{msg.user}</span>
           <br />
 
           <span className="card-content">{msg.message}</span>
@@ -69,10 +69,10 @@ class NewMessageForm extends Component {
   render() {
     console.log("this.state", this.state);
     return (
-      <div className="row card">
+      <div className="row card container">
         <br />
-        <div className="card-title green-text">Messages</div>
-        {this.paintAllChats()}
+        <div className="card-title center">Message Window</div>
+        <div className="mains">{this.paintAllChats()}</div>
         <form
           className="col s12 bottom input-field card-action"
           onSubmit={this.handleSubmit}
@@ -85,7 +85,7 @@ class NewMessageForm extends Component {
             onChange={this.handleChange}
           />
 
-          <button className="btn send" type="submit">
+          <button className="btn send cyan darken-2 " type="submit">
             Send
           </button>
         </form>

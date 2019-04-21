@@ -53,7 +53,7 @@ class Register extends Component {
       <div className="container">
         <br />
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="green-text text-darken-3">Register to chat!</h5>
+          <h5 className="cyan-text text-darken-4">Register to chat!</h5>
           <br />
           <div className="input-field">
             <label htmlFor="firstName">First Name</label>
@@ -93,13 +93,13 @@ class Register extends Component {
           </div>
           <div className="input-field">
             <br />
-            <button className="btn green lighten-1 z-depth-0">
+            <button className="btn cyan darken-2 z-depth-0">
               Get Started!
             </button>
             <p>
               Already a user?{" "}
-              <Link to="/login" className="green-text lighten-1">
-                Login
+              <Link to="/login" className="cyan-text text-darken-4">
+                Login!
               </Link>
             </p>
           </div>

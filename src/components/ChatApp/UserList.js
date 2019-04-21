@@ -34,7 +34,7 @@ class UserList extends Component {
       return (
         <div className="card" key={`name-${index}`}>
           {/* <span className="card-title">Contacts</span> */}
-          <span className="card green-text">{usr.name}</span>
+          <span className=" grey-text users darken-4">{usr.name}</span>
           <br />
         </div>
       );
@@ -63,9 +63,9 @@ class UserList extends Component {
   };
   render() {
     return (
-      <div className="card">
+      <div className="card ">
         <br />
-        <div className="card-title green-text">Contacts</div>
+        <div className="card-title center">Contacts</div>
         <span className="card-content">{this.paintAllUsers()}</span>
       </div>
     );
